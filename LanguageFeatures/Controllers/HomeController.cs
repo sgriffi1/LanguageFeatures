@@ -30,7 +30,7 @@ namespace LanguageFeatures.Controllers
             names[2] = "Alice";
             return View("Index", names);
         }
-        //ABOVE INDEX CAN BE WRITTEN AS BELOW
+        //ABOVE IndexA CAN BE WRITTEN AS BELOW IndexB
 
         public ViewResult IndexB()
         {
@@ -50,7 +50,7 @@ namespace LanguageFeatures.Controllers
             return View("Index", products.Keys);
         }
 
-        //ABOVE INDEX CAN BE WRITTEN AS BELOW
+        //ABOVE IndexC CAN BE WRITTEN AS BELOW IndexD
 
         public ViewResult IndexD()
         {
