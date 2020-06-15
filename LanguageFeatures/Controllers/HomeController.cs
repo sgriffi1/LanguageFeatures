@@ -37,5 +37,30 @@ namespace LanguageFeatures.Controllers
             return View("Index", new string[] { "Bob", "Joe", "Alice" });
         }
 
+
+
+
+        public ViewResult IndexC()
+        {
+            Dictionary<string, Product> products = new Dictionary<string, Product>
+            {
+                { "Kayak", new Product { Name = "Kayak", Price = 275M } },
+                { "Lifejacket", new Product { Name = "Lifejacket", Price = 48.95M } }
+            };
+            return View("Index", products.Keys);
+        }
+
+        //ABOVE INDEX CAN BE WRITTEN AS BELOW
+
+        public ViewResult IndexD()
+        {
+            Dictionary<string, Product> products = new Dictionary<string, Product>
+            {
+                ["Kayak"] = new Product { Name = "Kayak", Price = 275M },
+                ["Lifejacket"] = new Product { Name = "Lifejacket", Price = 48.95M }
+            };
+            return View("Index", products.Keys);
+        }
+
     }
 }
